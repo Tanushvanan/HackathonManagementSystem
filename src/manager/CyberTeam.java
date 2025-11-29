@@ -13,5 +13,5 @@ public class CyberTeam extends Team {
         return (scores[0] + scores[1] * 2.0 + scores[2] + scores[3]) / 5.0; 
     }
     
-    // No need to override getScoreArray, setScores, or getFullDetails, they are inherited.
+    
 }
