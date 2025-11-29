@@ -15,7 +15,7 @@ public class HackathonGUI extends JFrame {
     private JTable teamTable;
     private DefaultTableModel tableModel;
 
-    // GUI fields for Add/Edit panels (reduced clutter by using local fields when possible)
+    // GUI fields for Add/Edit panels 
     private JTextField searchField;
     private JTextArea statsArea;
 
@@ -26,7 +26,7 @@ public class HackathonGUI extends JFrame {
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Set custom close operation
         setLocationRelativeTo(null);
 
-        // Stage 6 requirement: GUI can be one window containing 3 separate panels (using JTabbedPane)
+        // Stage 6 requirement: GUI can be one window containing 3 separate panels 
         JTabbedPane tabs = new JTabbedPane();
         tabs.add("1. Teams Table", createTeamTablePanel());
         tabs.add("2. Edit/Remove Team", createEditUpdatePanel());
