@@ -126,7 +126,7 @@ public class HackathonGUI extends JFrame {
 
         tableModel.setRowCount(0);
         for (Team t : teams) {
-            // FIX: No downcasting needed! getScoreArray() is inherited.
+         
             int[] scores = t.getScoreArray(); 
 
             tableModel.addRow(new Object[]{
@@ -168,7 +168,7 @@ public class HackathonGUI extends JFrame {
                 "Data Science", "Cloud Computing", "Sustainability Tech"
         });
 
-        // Use JSpinners for scores for easier validation
+        
         SpinnerModel scoreModel = new SpinnerNumberModel(0, 0, 5, 1);
         JSpinner editCreativityBox = new JSpinner(new SpinnerNumberModel(0, 0, 5, 1));
         JSpinner editTechnicalBox = new JSpinner(new SpinnerNumberModel(0, 0, 5, 1));
@@ -211,7 +211,7 @@ public class HackathonGUI extends JFrame {
                 Team t = teamList.getTeamByID(id);
                 if (t == null) return;
                 
-                // Create a temporary score array to calculate the *potential* new overall score
+              
                 int[] tempScores = {
                     (Integer) editCreativityBox.getValue(),
                     (Integer) editTechnicalBox.getValue(),
@@ -219,8 +219,7 @@ public class HackathonGUI extends JFrame {
                     (Integer) editPresentationBox.getValue()
                 };
                 
-                // Use a temporary subclass instance (or update the real one temporarily)
-                // We'll update the real one fully in the update button action.
+                
                 t.setScores(tempScores);
                 overallScoreLabel.setText("Overall Score: " + String.format("%.2f", t.getOverallScore()));
                 
@@ -248,7 +247,7 @@ public class HackathonGUI extends JFrame {
                 editUniversityField.setText(t.getUniversity());
                 editCategoryBox.setSelectedItem(t.getCategory());
 
-                // FIX: No downcasting needed!
+              
                 int[] sc = t.getScoreArray();
 
                 editCreativityBox.setValue(sc[0]);
