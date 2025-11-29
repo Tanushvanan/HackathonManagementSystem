@@ -9,7 +9,7 @@ public abstract class Team {
     private String university;
     private String category;
     
-    // FIX 1: Declare scores array in the abstract superclass
+    //  Declare scores array in the abstract superclass
     protected int[] scores; 
 
     public Team(int teamID, String teamName, String university, String category, int[] scores) {
@@ -48,7 +48,7 @@ public abstract class Team {
     // ---------------- Abstract method ----------------
     public abstract double getOverallScore();
 
-    // ---------------- Full details (Includes scores now) ----------------
+    // ---------------- Full details  ----------------
     public String getFullDetails() {
         return "Team ID " + teamID + ", name " + teamName + " (" + university + ")\n" +
                 teamName + " is competing in the **" + category + "** category, and received scores " + Arrays.toString(scores) +
