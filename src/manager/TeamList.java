@@ -28,7 +28,7 @@ public class TeamList {
             int lineNum = 1;
 
             while ((line = br.readLine()) != null) {
-                // Ignore header line if any (basic check)
+                // Ignore header line if any 
                 if (lineNum == 1 && line.toLowerCase().contains("team id")) {
                     lineNum++;
                     continue;
@@ -110,11 +110,11 @@ public class TeamList {
 
     public void saveToCSV(String filename) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
-             // Optional: Write header
+             
              pw.println("teamID,teamName,university,category,score1,score2,score3,score4");
              
             for (Team t : teams) {
-                // No downcasting needed! getScoreArray() is inherited from Team.
+                
                 int[] scores = t.getScoreArray(); 
 
                 pw.println(t.getTeamID() + "," + t.getTeamName() + "," + t.getUniversity() + "," +
