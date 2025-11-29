@@ -10,7 +10,7 @@ public class main {
 
         TeamList list = new TeamList();
 
-        // Try loading CSV on startup (Stage 5 requirement)
+        // loading CSV on startup (Stage 5 requirement)
         list.loadFromCSV("HackathonTeams.csv");
 
         // Stage 6 requirement: GUI opened by the manager class
