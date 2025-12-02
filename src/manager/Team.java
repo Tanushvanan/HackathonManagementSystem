@@ -1,22 +1,28 @@
 package manager;
 
 import java.util.Arrays;
+import java.util.Objects; // Used for Objects.requireNonNull()
 
 public abstract class Team {
 
     private int teamID;
     private String teamName;
     private String university;
-    private String category;
-    
-    // FIX 1: Declare scores array in the abstract superclass
+    // Custom Attribute: HAS-A Relationship
+    private Category categoryObject; 
+
+    // Required Attribute: Array of Scores (4 scores)
     protected int[] scores; 
 
-    public Team(int teamID, String teamName, String university, String category, int[] scores) {
+  // Constructor requires Category object
+    public Team(int teamID, String teamName, String university, Category categoryObj, int[] scores) {
         this.teamID = teamID;
         this.teamName = teamName;
         this.university = university;
-        this.category = category;
+        
+        // Ensures the Category object is not null
+        this.categoryObject = Objects.requireNonNull(categoryObj); 
+
         if (scores == null || scores.length != 4) {
             this.scores = new int[]{0, 0, 0, 0};
         } else {
@@ -28,17 +34,18 @@ public abstract class Team {
     public int getTeamID() { return teamID; }
     public String getTeamName() { return teamName; }
     public String getUniversity() { return university; }
-    public String getCategory() { return category; }
-    
-    // Non-abstract method moved from subclasses
+    // 🌟 MODIFIED: Accesses the name from the Category object
+    public String getCategory() { return categoryObject.getCategoryName(); }
     public int[] getScoreArray() { return scores; }
 
     // ---------------- Setters ----------------
     public void setTeamName(String name) { this.teamName = name; }
     public void setUniversity(String uni) { this.university = uni; }
-    public void setCategory(String cat) { this.category = cat; }
+    // 🌟 MODIFIED: Updates the name within the Category object
+    public void setCategory(String catName) { 
+        this.categoryObject.setCategoryName(catName);
+    }
     
-    // Non-abstract method moved from subclasses
     public void setScores(int[] scores) { 
         if (scores.length == 4) {
             this.scores = scores; 
@@ -48,11 +55,12 @@ public abstract class Team {
     // ---------------- Abstract method ----------------
     public abstract double getOverallScore();
 
-    // ---------------- Full details (Includes scores now) ----------------
+    // ---------------- Full details ----------------
     public String getFullDetails() {
         return "Team ID " + teamID + ", name " + teamName + " (" + university + ")\n" +
-                teamName + " is competing in the **" + category + "** category, and received scores " + Arrays.toString(scores) +
-                ", resulting in an overall score of " + String.format("%.2f", getOverallScore());
+                teamName + " is competing in the **" + getCategory() + "** category, and received scores " +
+                Arrays.toString(scores) + ", resulting in an overall score of " +
+                String.format("%.2f", getOverallScore());
     }
 
     // ---------------- Short details ----------------
@@ -61,6 +69,7 @@ public abstract class Team {
         for (String part : teamName.split(" ")) {
             if (!part.isEmpty()) initials += part.charAt(0);
         }
-        return "TID " + teamID + " (" + initials + ") has an overall score of " + String.format("%.2f", getOverallScore());
+        return "TID " + teamID + " (" + initials + ") has an overall score of " +
+                String.format("%.2f", getOverallScore());
     }
 }

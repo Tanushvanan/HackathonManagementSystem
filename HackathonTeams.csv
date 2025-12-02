@@ -1,6 +1,6 @@
 teamID,teamName,university,category,score1,score2,score3,score4
 100,Code Innovators,UM,Web Development,5,2,1,5
-101,Cyber Titans,UTM,Cybersecurity,4,5,5,4
+101,Cyber Stupid,UTM,Cybersecurity,1,1,1,1
 102,AI Vision,UKM,Artificial Intelligence,4,5,2,2
 103,PIONEERS DATA,USM,Web Development,1,1,3,4
 104,QuantUm Hackers,UMS,Sustainability Tech,1,2,3,4
@@ -13,10 +13,14 @@ teamID,teamName,university,category,score1,score2,score3,score4
 111,Cloud Ninjas,UTP,Cloud Computing,5,2,4,4
 112,Byte Force,IIUM,Web Development,1,4,4,2
 113,Algo Masters,UMT,Artificial Intelligence,2,3,3,5
-114,Code Warriors,UPM,Web Development,1,5,1,5
+114,Code Warriors,UPM,Web Development,3,3,3,3
 115,Green Techies,USIM,Sustainability Tech,4,4,4,4
 116,Digital Pioneers,USM,Mobile Applications,3,3,3,4
 117,NextGen Coders,UMS,Cybersecurity,1,2,4,4
 118,App Gurus,UiTM,Mobile Applications,5,4,4,2
 119,Vision Coders,UKM,Artificial Intelligence,2,3,4,5
 120,Pat,Segi,Sustainability Tech,3,3,3,3
+121,idk,segi,Data Science,0,0,0,0
+122,HELOOO,SEGI,Web Development,0,0,0,0
+123,HEYHS,UNITAR,Data Science,5,0,2,3
+124,pooja,msu,Data Science,0,0,0,0

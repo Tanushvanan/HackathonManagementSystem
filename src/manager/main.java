@@ -1,21 +1,22 @@
 package manager;
 
-import manager.gui.HackathonGUI;
+import manager.gui.LoginGUI;
 import javax.swing.*;
 
-// This class acts as the HackathonManager/Entry Point
-public class main { 
-
+public class main {
     public static void main(String[] args) {
 
         TeamList list = new TeamList();
-
-        // Try loading CSV on startup (Stage 5 requirement)
         list.loadFromCSV("HackathonTeams.csv");
 
-        // Stage 6 requirement: GUI opened by the manager class
+        // Create staff objects with default IDs and Names
+        Admin admin = new Admin(1, new Name("Default", "Admin"));
+        Judge judge = new Judge(2, new Name("Default", "Judge"));
+        RegistrationClerk clerk = new RegistrationClerk(3, new Name("Default", "Clerk"));
+        Organizer organizer = new Organizer(4, new Name("Default", "Organizer"));
+
         SwingUtilities.invokeLater(() -> {
-            new HackathonGUI(list).setVisible(true);
+            new LoginGUI(list, admin, judge, clerk, organizer).setVisible(true);
         });
     }
 }
