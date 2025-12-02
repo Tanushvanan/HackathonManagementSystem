@@ -1,0 +1,102 @@
+=========================================
+      Hackathon Final Report           
+=========================================
+
+=== 1. Full Teams Detail Table ===
+
+Team ID 100, name Code Innovators (UM)
+Code Innovators is competing in the **Web Development** category, and received scores [5, 2, 1, 5], resulting in an overall score of 3.25
+
+Team ID 101, name Cyber Stupid (UTM)
+Cyber Stupid is competing in the **Cybersecurity** category, and received scores [1, 1, 1, 1], resulting in an overall score of 1.00
+
+Team ID 102, name AI Vision (UKM)
+AI Vision is competing in the **Artificial Intelligence** category, and received scores [4, 5, 2, 2], resulting in an overall score of 3.00
+
+Team ID 103, name PIONEERS DATA (USM)
+PIONEERS DATA is competing in the **Web Development** category, and received scores [1, 1, 3, 4], resulting in an overall score of 2.25
+
+Team ID 104, name QuantUm Hackers (UMS)
+QuantUm Hackers is competing in the **Sustainability Tech** category, and received scores [1, 2, 3, 4], resulting in an overall score of 2.50
+
+Team ID 105, name Web Masters (UiTM)
+Web Masters is competing in the **Web Development** category, and received scores [2, 5, 5, 3], resulting in an overall score of 3.75
+
+Team ID 106, name Pixel Coders (MMU)
+Pixel Coders is competing in the **Mobile Applications** category, and received scores [4, 2, 4, 4], resulting in an overall score of 3.50
+
+Team ID 107, name Smart Solutions (UMK)
+Smart Solutions is competing in the **Artificial Intelligence** category, and received scores [5, 4, 4, 2], resulting in an overall score of 4.00
+
+Team ID 108, name Code Dreamers (USIM)
+Code Dreamers is competing in the **Mobile Applications** category, and received scores [5, 5, 5, 5], resulting in an overall score of 5.00
+
+Team ID 109, name Tech Visionaries (UUM)
+Tech Visionaries is competing in the **Artificial Intelligence** category, and received scores [4, 5, 3, 2], resulting in an overall score of 3.50
+
+Team ID 110, name Secure Minds (UNITEN)
+Secure Minds is competing in the **Cybersecurity** category, and received scores [4, 3, 5, 5], resulting in an overall score of 4.00
+
+Team ID 111, name Cloud Ninjas (UTP)
+Cloud Ninjas is competing in the **Cloud Computing** category, and received scores [5, 2, 4, 4], resulting in an overall score of 3.75
+
+Team ID 112, name Byte Force (IIUM)
+Byte Force is competing in the **Web Development** category, and received scores [1, 4, 4, 2], resulting in an overall score of 2.75
+
+Team ID 113, name Algo Masters (UMT)
+Algo Masters is competing in the **Artificial Intelligence** category, and received scores [2, 3, 3, 5], resulting in an overall score of 3.00
+
+Team ID 114, name Code Warriors (UPM)
+Code Warriors is competing in the **Web Development** category, and received scores [3, 3, 3, 3], resulting in an overall score of 3.00
+
+Team ID 115, name Green Techies (USIM)
+Green Techies is competing in the **Sustainability Tech** category, and received scores [4, 4, 4, 4], resulting in an overall score of 4.00
+
+Team ID 116, name Digital Pioneers (USM)
+Digital Pioneers is competing in the **Mobile Applications** category, and received scores [3, 3, 3, 4], resulting in an overall score of 3.25
+
+Team ID 117, name NextGen Coders (UMS)
+NextGen Coders is competing in the **Cybersecurity** category, and received scores [1, 2, 4, 4], resulting in an overall score of 2.60
+
+Team ID 118, name App Gurus (UiTM)
+App Gurus is competing in the **Mobile Applications** category, and received scores [5, 4, 4, 2], resulting in an overall score of 3.75
+
+Team ID 119, name Vision Coders (UKM)
+Vision Coders is competing in the **Artificial Intelligence** category, and received scores [2, 3, 4, 5], resulting in an overall score of 3.50
+
+Team ID 120, name Pat (Segi)
+Pat is competing in the **Sustainability Tech** category, and received scores [3, 3, 3, 3], resulting in an overall score of 3.00
+
+Team ID 121, name idk (segi)
+idk is competing in the **Data Science** category, and received scores [0, 0, 0, 0], resulting in an overall score of 0.00
+
+Team ID 122, name HELOOO (SEGI)
+HELOOO is competing in the **Web Development** category, and received scores [0, 0, 0, 0], resulting in an overall score of 0.00
+
+Team ID 123, name HEYHS (UNITAR)
+HEYHS is competing in the **Data Science** category, and received scores [5, 0, 2, 3], resulting in an overall score of 2.50
+
+Team ID 124, name pooja (msu)
+pooja is competing in the **Data Science** category, and received scores [0, 0, 0, 0], resulting in an overall score of 0.00
+
+
+=== 2. Team with Highest Score ===
+Team ID 108, name Code Dreamers (USIM)
+Code Dreamers is competing in the **Mobile Applications** category, and received scores [5, 5, 5, 5], resulting in an overall score of 5.00
+
+
+=== 3. Summary Stats ===
+Total Teams: 25
+Average Overall Score: 2.83
+Minimum Overall Score: 0.00
+Maximum Overall Score: 5.00
+
+=== 4. Individual Score Frequency ===
+Score 0: 13 times awarded
+Score 1: 10 times awarded
+Score 2: 15 times awarded
+Score 3: 20 times awarded
+Score 4: 24 times awarded
+Score 5: 18 times awarded
+
+Report Generation Complete.
