@@ -1,3 +1,4 @@
+
 package manager.gui;
 
 import manager.*;
@@ -102,8 +103,6 @@ if (role.equalsIgnoreCase("Organizer") || role.equalsIgnoreCase("Admin")) {
 // Add tabs to window
 root.add(tabs, BorderLayout.CENTER);
 
-        
-        
 
         // ---------- Footer ----------
         JPanel footer = new JPanel(new FlowLayout(FlowLayout.RIGHT));

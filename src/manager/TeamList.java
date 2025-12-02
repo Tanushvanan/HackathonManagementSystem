@@ -27,12 +27,12 @@ public class TeamList {
     }
 
     // Extracting the search method
-public Team getTeamByID(int id) {
+    public Team getTeamByID(int id) {
     // Required: Loop through the ArrayList to find the ID
     for (Team t : teams) {
         if (t.getTeamID() == id) {
             return t;
-        }
+    }
     }
     return null; // Return null if not found (invalid ID)
 }
@@ -100,26 +100,26 @@ public Team getTeamByID(int id) {
                     for (int i = 0; i < 4; i++) scores[i] = Integer.parseInt(parts[4 + i].trim());
 
                     // 🌟 MODIFICATION: Use subclasses based on category
-                    Team t;
-                    switch (cat.toLowerCase()) {
-                        case "cybersecurity":
+Team t;
+switch (cat.toLowerCase()) {
+    case "cybersecurity":
                             t = new CyberTeam(id, name, uni, scores);
-                            break;
-                        case "artificial intelligence":
+        break;
+    case "artificial intelligence":
                             t = new AITeam(id, name, uni, scores);
-                            break;
-                        default:
+        break;
+    default:
                             // Fallback (simple average) for all other categories
                             // ⚠️ NOTE: This uses an anonymous class, as requested by the user to preserve original logic.
                             Category fallbackCat = new Category(0, cat, "General Category");
                             t = new Team(id, name, uni, fallbackCat, scores) {
-                                @Override
-                                public double getOverallScore() {
-                                    return Arrays.stream(getScoreArray()).average().orElse(0.0);
-                                }
-                            };
-                            break;
-                    }
+            @Override
+            public double getOverallScore() {
+                return Arrays.stream(getScoreArray()).average().orElse(0.0);
+            }
+        };
+        break;
+}
 
                     addTeam(t);
                 } catch (NumberFormatException nfe) {
@@ -174,55 +174,55 @@ public Team getTeamByID(int id) {
 
     // ----- Reports & Stats -----
     // Extracting the final report method
-public void saveReport(String filename) {
-    try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
-        pw.println("=========================================");
+    public void saveReport(String filename) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
+            pw.println("=========================================");
         pw.println("      Hackathon Final Report           ");
-        pw.println("=========================================\n");
+            pw.println("=========================================\n");
 
         // Required 1: Table of teams with full details
-        pw.println("=== 1. Full Teams Detail Table ===\n");
-        for (Team t : teams) pw.println(t.getFullDetails() + "\n");
+            pw.println("=== 1. Full Teams Detail Table ===\n");
+            for (Team t : teams) pw.println(t.getFullDetails() + "\n");
 
         // Required 2: Details of the team with the highest overall score
-        Team top = getHighestScoreTeam();
-        pw.println("\n=== 2. Team with Highest Score ===");
-        if (top != null) pw.println(top.getFullDetails() + "\n");
-        else pw.println("No teams available.");
+            Team top = getHighestScoreTeam();
+            pw.println("\n=== 2. Team with Highest Score ===");
+            if (top != null) pw.println(top.getFullDetails() + "\n");
+            else pw.println("No teams available.");
 
         // Required 3: Four other summary statistics (avg, min, max, total teams)
-        pw.println("\n=== 3. Summary Stats ===");
-        pw.println("Total Teams: " + teams.size());
-        pw.println("Average Overall Score: " + String.format("%.2f", getAverageScore()));
-        pw.println("Minimum Overall Score: " + String.format("%.2f", getMinOverallScore()));
-        pw.println("Maximum Overall Score: " + String.format("%.2f", getMaxOverallScore()));
+            pw.println("\n=== 3. Summary Stats ===");
+            pw.println("Total Teams: " + teams.size());
+            pw.println("Average Overall Score: " + String.format("%.2f", getAverageScore()));
+            pw.println("Minimum Overall Score: " + String.format("%.2f", getMinOverallScore()));
+            pw.println("Maximum Overall Score: " + String.format("%.2f", getMaxOverallScore()));
 
         // Required 4: Frequency report
-        pw.println("\n=== 4. Individual Score Frequency ===");
-        int[] freq = getScoreFrequency();
-        for (int i = 0; i < freq.length; i++) pw.println("Score " + i + ": " + freq[i] + " times awarded");
+            pw.println("\n=== 4. Individual Score Frequency ===");
+            int[] freq = getScoreFrequency();
+            for (int i = 0; i < freq.length; i++) pw.println("Score " + i + ": " + freq[i] + " times awarded");
 
-        pw.println("\nReport Generation Complete.");
-    } catch (IOException e) {
-        System.out.println("ERROR SAVING REPORT: " + e.getMessage());
+            pw.println("\nReport Generation Complete.");
+        } catch (IOException e) {
+            System.out.println("ERROR SAVING REPORT: " + e.getMessage());
+        }
     }
-}
 
    // Extracting the Score Frequency logic
-public int[] getScoreFrequency() {
+    public int[] getScoreFrequency() {
     // Array to hold counts for scores 0 through 5
-    int[] freq = new int[6];
-    for (Team t : teams) {
+        int[] freq = new int[6];
+        for (Team t : teams) {
         // Iterates through all scores of all teams
-        for (int s : t.getScoreArray()) {
+            for (int s : t.getScoreArray()) {
             // Check boundaries (0-5)
             if (s >= 0 && s <= 5) {
                 freq[s]++;
             }
         }
     }
-    return freq;
-}
+        return freq;
+    }
 
     public double getAverageScore() {
         if (teams.isEmpty()) return 0;
