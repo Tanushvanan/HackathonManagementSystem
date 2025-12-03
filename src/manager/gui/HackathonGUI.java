@@ -13,15 +13,7 @@ import java.awt.event.WindowEvent;
 import java.util.*;
 import java.util.List;
 
-/**
- * HackathonGUI
- * Full, copy-paste-ready GUI class. Keeps your existing TeamList/Team logic intact.
- *
- * Notes:
- * - Judges can open the "Edit / Remove Team" tab but only edit scores.
- * - Add Team tab is shown only to users with modification rights (not Judge/Competitor/Public).
- * - Any anonymous Team creation provides getOverallScore() implementation to avoid abstract-class errors.
- */
+
 public class HackathonGUI extends JFrame {
 
     private TeamList teamList;
@@ -43,7 +35,7 @@ public class HackathonGUI extends JFrame {
         this.role = role;
 
         setTitle("Hackathon Manager — Role: " + role);
-        setSize(1200, 780);                      // slightly bigger as requested
+        setSize(1200, 780);                      
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
@@ -84,8 +76,7 @@ if (role.equalsIgnoreCase("Competitor")) {
     tabs.addTab("Registration", createRegistrationPanel());
 }
 
-// Public: NO registration, NO edit, NO add
-// (nothing to add here)
+
 
 // Registration Clerk: Can add + edit
 if (role.equalsIgnoreCase("Registration Clerk")) {
@@ -384,7 +375,7 @@ root.add(tabs, BorderLayout.CENTER);
     }
 
     // ---------------- Add Team Panel ----------------
-    // Visible only to modifying roles (we check caller earlier)
+    // Visible only to modifying roles 
     private JPanel createAddTeamPanel() {
         JPanel panel = new JPanel(new BorderLayout(15, 15));
         panel.setBorder(new EmptyBorder(12, 12, 12, 12));
