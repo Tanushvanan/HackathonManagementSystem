@@ -1,7 +1,7 @@
 // File: TestStageFour.java (for isolated testing only)
 package manager;
 
-// Note: Ensure your classes (CyberTeam, AITeam, Category, Name) are accessible
+
 public class TestStageFour {
     
     public static void main(String[] args) {
