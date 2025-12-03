@@ -110,7 +110,7 @@ switch (cat.toLowerCase()) {
         break;
     default:
                             // Fallback (simple average) for all other categories
-                            // ⚠️ NOTE: This uses an anonymous class, as requested by the user to preserve original logic.
+                         
                             Category fallbackCat = new Category(0, cat, "General Category");
                             t = new Team(id, name, uni, fallbackCat, scores) {
             @Override
