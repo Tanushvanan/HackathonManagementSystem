@@ -7,5 +7,5 @@ package manager;
 
     public void manageCategories() {}
     public void assignJudges() {}
-    public void generateReports() {}  // stub, since you're ignoring Report class
+    public void generateReports() {}  
 }
